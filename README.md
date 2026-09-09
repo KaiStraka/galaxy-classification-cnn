@@ -40,8 +40,8 @@ The files work in a simple fashion and must be run in the order as follows:
         4 gal_classifier.py : classifies images stored locally. Input the desired image path (Line 17) and let it run. A prediction and confidence will be printed.
 
 Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.67 was achieved.
-These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification work, and that goal was achieved.
-Attached are some images and their respective predictions. Note these images are from a completely separate dataset.
+These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification, that goal was achieved.
+Attached are some images and their respective predictions. Note these images are from a completely unrelated dataset.
 
 
 <img width="927" height="364" alt="galML examples" src="https://github.com/user-attachments/assets/27540927-d560-4eed-bc17-6b687479f9aa" />
