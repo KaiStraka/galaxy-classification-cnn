@@ -34,10 +34,10 @@ Libraries used:
 
 The files work in a simple fashion and must be run in the order as follows: 
         GalModel.py : the model itself, it gets called by other files. DO NOT RUN IT DOES NOTHING.
-        1 gal_train.py : the training loop. Select the amount of epochs to train (Line 23) and let it run. The trained model will be saved as a .pth file.
+        1 gal_train.py : training loop. Select the amount of epochs to train (Line 23) and let it run. The trained model will be saved as                    "galaxy_model1.pth", my particular trained model file is also uploaded.
         2 gal_validation.py : validates the trained model on a separate validation subset and gives an accuracy and loss reading.
         3 gal_test.py : similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading.
-        4 gal_classifier.py : classifies images stored locally. Input the desired image path (Line 17) and let it run. A prediction and confidence will be printed.
+        4 gal_classifier.py : classifies locally stored images. Input the desired image path (Line 17) and let it run. A prediction and confidence           will be printed.
 
 Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification, that goal was achieved.
