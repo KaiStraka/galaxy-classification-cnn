@@ -1,4 +1,4 @@
-Kai Straka 2026
+KAI STRAKA 09.2026
 Galaxy morphology image classification personal project.
 Built in Python using PyTorch and MrJordi0 Galaxy Zoo dataset available through Hugging Face.
 The model is a convolutional neural network (CNN) with 3 convolutional layers and 2 fully connected (FC) layers.
@@ -19,6 +19,20 @@ Other notable details:
     Learning rate : 0.0005
     Weight decay : 0.0005
     Loss function : Cross Entropy
+
+Libraries used:
+    Numpy
+    Pandas
+    PyTorch
+    datasets
+    datetime
+
+The files work in a simple fashion and must be run in the order as follows: 
+        GalModel.py : the model itself, it gets called by other files. DO NOT RUN IT DOES NOTHING
+        1 gal_train.py : the training loop. Select the amount of epochs to train (Line 22) and let it run. The trained model will be saved as a .pth file.
+        2 gal_validation.py : validates the trained model on a separate validation subset and gives an accuracy and loss reading.
+        3 gal_test.py : similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading.
+        4 gal_classifier.py : classifies images stored locally. Input the desired image path (Line 16) and let it run. A prediction and confidence will be printed.
 
 Through many iterations, a final Accuracy of ~75.2 % and Loss of ~ 0.67 was achieved.
 These values are sub optimal, but the goal of this project was to become familiar with CNNs and image classification work, and that goal has been achieved.
