@@ -1,3 +1,4 @@
+# KAI STRAKA 09.2026
 import GalModel
 from GalModel import GalCNN, GalDataset, prep_img
 
