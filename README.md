@@ -8,9 +8,9 @@ Model architecture follows a simple flow:
     Input Image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Fully connected layer 1 + ReLU -> Fully connected layer 2 -> Prediction.
 
 The convolutional layers and batches increase in sizes equally:
-    Conv 1 : 32 batch size
-    Conv 2 : 64 batch size
-    Conv 3 : 128 batch size
+    Conv 1 : 32 channels / filters
+    Conv 2 : 64 channels / filters
+    Conv 3 : 128 channels / filters
 
 Similarly, FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 possible answers, each corresponding to 1 of 8 Galaxy Zoo dataset types.
 
