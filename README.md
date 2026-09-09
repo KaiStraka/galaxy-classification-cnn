@@ -38,9 +38,11 @@ The files work in a simple fashion and must be run in the order as follows:
 
 Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification work, and that goal was achieved.
+Attached are some images and their respective predictions, note these images are from a completely separate dataset.
+
+<img width="927" height="364" alt="galML examples" src="https://github.com/user-attachments/assets/27540927-d560-4eed-bc17-6b687479f9aa" />
 
 Below is the cited Galaxy Zoo dataset.
-
 
 @misc{Lin2021,
     author = {Lin, Joshua Yao-Yu and Liao, Song-Mao and Huang, Hung-Jin and Kuo, Wei-Ting and Ou, Olivia Hsuan-Min},
