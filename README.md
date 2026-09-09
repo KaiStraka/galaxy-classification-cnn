@@ -2,11 +2,11 @@ KAI STRAKA 09.2026
 
 Small galaxy morphology image classification personal project.
 Built in Python using PyTorch and mrJordi0/galaxy-zoo-dataset available through Hugging Face.
-The model is a convolutional neural network (CNN) with 3 convolutional layers and 2 fully connected (FC) layers.
+The model uses a convolutional neural network (CNN) with 3 convolutional layers and 2 fully connected (FC) layers.
 
 A custom function standardizes each image into a black and white 64x64 image, then converts all pixels into a tensor which is then used by the model.
 Model architecture follows a simple flow:
-    Input image -> Normalize image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Flattens tensor -> Fully connected layer 1 -> ReLU -> Fully connected layer 2 -> Prediction.
+    Input image -> Prepare image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Flatten tensor -> Fully connected layer 1 -> ReLU -> Fully connected layer 2 -> Prediction.
 
 The convolutional layers and batches increase in sizes equally:
     Conv 1 : 32 channels / filters,
@@ -15,6 +15,8 @@ The convolutional layers and batches increase in sizes equally:
 
 Similarly, FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 morphology classes, each corresponding to 1 of 8 Galaxy Zoo dataset classes.
 The Galaxy Zoo dataset has 8 galaxy classes (0 -> 7) each indicating a different galaxy type. The model predicts by returning a list of 8 logits, and identifying the largest value. mrJordi0/galaxy-zoo-dataset architecture made this project much easier and was an amazing resource.
+
+<img width="2813" height="392" alt="galMLflow" src="https://github.com/user-attachments/assets/b2932984-b673-4aea-9577-9439934aee43" />
 
 Other notable details:
     Activation function : ReLU,
@@ -39,7 +41,7 @@ The files work in a simple fashion and must be run in the order as follows:
 
 Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification work, and that goal was achieved.
-Attached are some images and their respective predictions, note these images are from a completely separate dataset.
+Attached are some images and their respective predictions. Note these images are from a completely separate dataset.
 
 
 <img width="927" height="364" alt="galML examples" src="https://github.com/user-attachments/assets/27540927-d560-4eed-bc17-6b687479f9aa" />
