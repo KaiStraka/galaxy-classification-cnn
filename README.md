@@ -35,7 +35,7 @@ The files work in a simple fashion and must be run in the order as follows:
         3 gal_test.py : similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading.
         4 gal_classifier.py : classifies images stored locally. Input the desired image path (Line 16) and let it run. A prediction and confidence will be printed.
 
-Through many iterations, a final Accuracy of ~75.2 % and Loss of ~ 0.67 was achieved.
+Through many iterations, a final [testing] Accuracy of ~75.2 % and Loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification work, and that goal was achieved.
 
 Below is the cited Galaxy Zoo dataset.
