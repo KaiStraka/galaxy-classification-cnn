@@ -1,11 +1,12 @@
 KAI STRAKA 09.2026
+
 Small galaxy morphology image classification personal project.
 Built in Python using PyTorch and mrJordi0/galaxy-zoo-dataset available through Hugging Face.
 The model is a convolutional neural network (CNN) with 3 convolutional layers and 2 fully connected (FC) layers.
 
 A custom function standardizes each image into a black and white 64x64 image, then converts all pixels into a tensor which is then used by the model.
 Model architecture follows a simple flow:
-    Input Image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Fully connected layer 1 + ReLU -> Fully connected layer 2 -> Prediction.
+    Input image -> Normalize image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Flattens tensor -> Fully connected layer 1 -> ReLU -> Fully connected layer 2 -> Prediction.
 
 The convolutional layers and batches increase in sizes equally:
     Conv 1 : 32 channels / filters,
@@ -40,7 +41,9 @@ Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification work, and that goal was achieved.
 Attached are some images and their respective predictions, note these images are from a completely separate dataset.
 
+
 <img width="927" height="364" alt="galML examples" src="https://github.com/user-attachments/assets/27540927-d560-4eed-bc17-6b687479f9aa" />
+
 
 Below is the cited Galaxy Zoo dataset.
 
