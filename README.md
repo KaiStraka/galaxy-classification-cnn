@@ -1,6 +1,6 @@
 KAI STRAKA 09.2026
-Galaxy morphology image classification personal project.
-Built in Python using PyTorch and MrJordi0 Galaxy Zoo dataset available through Hugging Face.
+Small galaxy morphology image classification personal project.
+Built in Python using PyTorch and mrJordi0 Galaxy Zoo dataset available through Hugging Face.
 The model is a convolutional neural network (CNN) with 3 convolutional layers and 2 fully connected (FC) layers.
 
 A custom function standardizes each image into a black and white 64x64 image, then converts all pixels into a list with corresponding pixel strengths.
