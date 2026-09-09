@@ -13,6 +13,7 @@ The convolutional layers and batches increase in sizes equally:
     Conv 3 : 128 channels / filters
 
 Similarly, FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 morphology classes, each corresponding to 1 of 8 Galaxy Zoo dataset classes.
+The Galaxy Zoo dataset has 8 galaxy classes (0 -> 7) each indicating a different galaxy type. The model predicts by returning a list of 8 logits, and identifying the largest value. mrJordi0/galaxy-zoo-dataset architecture made this project much easier and was an amazing resource.
 
 Other notable details:
     Activation function : ReLU,
@@ -35,7 +36,7 @@ The files work in a simple fashion and must be run in the order as follows:
         3 gal_test.py : similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading.
         4 gal_classifier.py : classifies images stored locally. Input the desired image path (Line 16) and let it run. A prediction and confidence will be printed.
 
-Through many iterations, a final [testing] Accuracy of ~75.2 % and Loss of ~ 0.67 was achieved.
+Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification work, and that goal was achieved.
 
 Below is the cited Galaxy Zoo dataset.
