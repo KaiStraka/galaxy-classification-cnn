@@ -8,28 +8,28 @@ Model architecture follows a simple flow:
     Input Image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Fully connected layer 1 + ReLU -> Fully connected layer 2 -> Prediction.
 
 The convolutional layers and batches increase in sizes equally:
-    Conv 1 : 32 channels / filters
-    Conv 2 : 64 channels / filters
+    Conv 1 : 32 channels / filters,
+    Conv 2 : 64 channels / filters,
     Conv 3 : 128 channels / filters
 
 Similarly, FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 morphology classes, each corresponding to 1 of 8 Galaxy Zoo dataset classes.
 
 Other notable details:
-    Activation function : ReLU
-    Optimizer : Adam
-    Learning rate : 0.0005
-    Weight decay : 0.0005
+    Activation function : ReLU,
+    Optimizer : Adam,
+    Learning rate : 0.0005,
+    Weight decay : 0.0005,
     Loss function : Cross Entropy
 
 Libraries used:
-    Numpy
-    Pandas
-    PyTorch
-    datasets
+    Numpy,
+    Pandas,
+    PyTorch,
+    datasets,
     datetime
 
 The files work in a simple fashion and must be run in the order as follows: 
-        GalModel.py : the model itself, it gets called by other files. DO NOT RUN IT DOES NOTHING
+        GalModel.py : the model itself, it gets called by other files. DO NOT RUN IT DOES NOTHING.
         1 gal_train.py : the training loop. Select the amount of epochs to train (Line 22) and let it run. The trained model will be saved as a .pth file.
         2 gal_validation.py : validates the trained model on a separate validation subset and gives an accuracy and loss reading.
         3 gal_test.py : similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading.
