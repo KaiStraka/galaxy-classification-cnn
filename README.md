@@ -6,38 +6,38 @@ The model uses a convolutional neural network (CNN) with 3 convolutional layers 
 
 A custom function standardizes each image into a black and white 64x64 image, then converts all pixels into a tensor which is then used by the model.
 Model architecture follows a simple flow:
-    Input image -> Prepare image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Flatten tensor -> Fully connected layer 1 -> ReLU -> Fully connected layer 2 -> Prediction.
+
+Input image -> Prepare image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Flatten tensor -> Fully connected layer 1 -> ReLU -> Fully connected layer 2 -> Prediction.
 
 The convolutional layers and batches increase in sizes equally:
-    Conv 1 : 32 channels / filters,
-    Conv 2 : 64 channels / filters,
-    Conv 3 : 128 channels / filters
+
+Conv 1: 32 channels / filters,
+
+Conv 2: 64 channels / filters,
+
+Conv 3: 128 channels / filters.
 
 Similarly, FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 morphology classes, each corresponding to 1 of 8 Galaxy Zoo dataset classes.
 The Galaxy Zoo dataset has 8 galaxy classes (0 -> 7) each indicating a different galaxy type. The model predicts by returning a list of 8 logits, and identifies the largest value. mrJordi0/galaxy-zoo-dataset architecture made this project much easier and was an amazing resource.
 
 <img width="2813" height="392" alt="galMLflow" src="https://github.com/user-attachments/assets/b2932984-b673-4aea-9577-9439934aee43" />
 
-Other notable details:
-    Activation function : ReLU,
-    Optimizer : Adam,
-    Learning rate : 0.0005,
-    Weight decay : 0.0005,
-    Loss function : Cross Entropy
+Other notable details;
+    Activation function: ReLU,
+    Optimizer: Adaptive moment estimation (Adam),
+    Loss function: Cross Entropy.
 
-Libraries used:
-    Numpy,
-    Pandas,
-    PyTorch,
-    datasets,
-    datetime
+The files work in a simple fashion and must be run in a specific order: 
 
-The files work in a simple fashion and must be run in the order as follows: 
-        GalModel.py : the model itself, it gets called by other files. DO NOT RUN IT DOES NOTHING.
-        1 gal_train.py : training loop. Select the amount of epochs to train (Line 23) and let it run. The trained model will be saved as                    "galaxy_model1.pth", my particular trained model file is also uploaded.
-        2 gal_validation.py : validates the trained model on a separate validation subset and gives an accuracy and loss reading.
-        3 gal_test.py : similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading.
-        4 gal_classifier.py : classifies locally stored images. Input the desired image path (Line 17) and let it run. A prediction and confidence           will be printed.
+GalModel.py: the model logic and architecture, gets called by all other files and does nothing if run alone.
+    
+1 gal_train.py: training loop. Select the amount of epochs to train (Line 23) and let it run. The trained model will be saved as                      "galaxy_model1.pth", my particular trained model file is also uploaded.
+
+2 gal_validation.py: validates the trained model on a separate validation subset and gives an accuracy and loss reading.
+
+3 gal_test.py: similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading.
+
+4 gal_classifier.py: classifies locally stored images. Input the desired image path (Line 17) and let it run. A prediction and confidence             will be printed.
 
 Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification, that goal was achieved.
