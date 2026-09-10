@@ -43,7 +43,7 @@ These values are not intended to be extraordinary, the goal of this project was 
 Attached are some images and their respective predictions. Note these images are from a completely novel dataset.
 
 
-<img width="927" height="364" alt="galML examples" src="https://github.com/user-attachments/assets/27540927-d560-4eed-bc17-6b687479f9aa" />
+<img width="1230" height="368" alt="galML examples 4" src="https://github.com/user-attachments/assets/a2e0e0cf-7a17-4d63-9c8d-a9c72b37b541" />
 
 
 Below is the cited Galaxy Zoo dataset.
