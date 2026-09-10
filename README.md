@@ -4,7 +4,7 @@ Small galaxy image classification personal project.
 Built in Python using PyTorch and mrJordi0/galaxy-zoo-dataset available through Hugging Face.
 The model uses a convolutional neural network (CNN) with 3 convolutional layers and 2 fully connected (FC) layers.
 
-A custom function standardizes each image into a black and white 64x64 image, then converts all pixels into a tensor which is then used by the model.
+A custom function standardizes each image into a black and white 64x64 format, then converts all pixels into a tensor which is then used by the model.
 Model architecture follows a simple flow:
 
 Input image -> Prepare image -> {Conv layer -> Batch normalization -> ReLU activation -> Max pooling 2x2} *3 -> Flatten tensor -> Fully connected layer 1 -> ReLU -> Fully connected layer 2 -> Prediction.
@@ -30,17 +30,17 @@ The files are straightforward and run in a specific order:
 
 **GalModel.py**: includes GalCNN class and image preperation functions, gets called by all other files.
     
-1 **gal_train.py**: training loop utilizing the training subset. Select the amount of epochs to train for (Line 23) and let it run. The trained model will be saved as "galaxy_model1.pth", my particular trained model file is also uploaded in the repository. Note all three training, validation and test files will print start and end times along with their respective info.
+1    **gal_train.py**: training loop utilizing the training subset. Select the amount of epochs to train for (line 23) and let it run. The trained model will be saved as "galaxy_model1.pth", my particular trained model file is also uploaded in the repository. Note all three training, validation and test files will print start and end times along with their respective info.
 
-2 **gal_validation.py**: validates the trained model on a separate validation subset and gives an accuracy and loss reading.
+2    **gal_validation.py**: validates the trained model on a separate validation subset and gives an accuracy and loss reading.
 
-3 **gal_test.py**: similar to validation, it runs the trained model on another separate subset and gives an accuracy and loss reading. 
+3    **gal_test.py**: similar to validation, it runs the trained model on another separate test subset and gives an accuracy and loss reading. 
 
-4 **gal_classifier.py**: classifies locally stored images. Input the desired image path (Line 17) and let it run. A prediction and confidence percentage will be printed.
+4    **gal_classifier.py**: classifies locally stored images. Input the desired image path (line 17) and let it run. A prediction and confidence percentage will be printed.
 
-Through many iterations, a final [testing] Accuracy of ~ 75.2 % and Loss of ~ 0.67 was achieved.
+Through many iterations, a final [testing] accuracy of ~ 75.2 % and loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification, that goal was achieved.
-Attached are some images and their respective predictions. Note these images are from a completely unrelated dataset.
+Attached are some images and their respective predictions. Note these images are from a completely novel dataset.
 
 
 <img width="927" height="364" alt="galML examples" src="https://github.com/user-attachments/assets/27540927-d560-4eed-bc17-6b687479f9aa" />
