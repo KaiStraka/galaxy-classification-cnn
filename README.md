@@ -14,7 +14,7 @@ The convolutional layers and batches increase in sizes equally:
     Conv 3 : 128 channels / filters
 
 Similarly, FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 morphology classes, each corresponding to 1 of 8 Galaxy Zoo dataset classes.
-The Galaxy Zoo dataset has 8 galaxy classes (0 -> 7) each indicating a different galaxy type. The model predicts by returning a list of 8 logits, and identifying the largest value. mrJordi0/galaxy-zoo-dataset architecture made this project much easier and was an amazing resource.
+The Galaxy Zoo dataset has 8 galaxy classes (0 -> 7) each indicating a different galaxy type. The model predicts by returning a list of 8 logits, and identifies the largest value. mrJordi0/galaxy-zoo-dataset architecture made this project much easier and was an amazing resource.
 
 <img width="2813" height="392" alt="galMLflow" src="https://github.com/user-attachments/assets/b2932984-b673-4aea-9577-9439934aee43" />
 
