@@ -21,7 +21,7 @@ image = image.unsqueeze(0)      # change dimension
 model = GalCNN()        # call model
 
 model.load_state_dict(torch.load("galaxy_model1.pth"))      # call saved trained model
-criterion = nn.CrossEntropyLoss()           # idk
+criterion = nn.CrossEntropyLoss()                           # loss function
 
 model.eval()            # set evaluation mode
 
