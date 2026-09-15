@@ -4,6 +4,9 @@ Small galaxy image classification personal project.
 Built in Python using PyTorch and mrJordi0/galaxy-zoo-dataset available through Hugging Face.
 The model uses a convolutional neural network (CNN) with 3 convolutional layers and 2 fully connected (FC) layers.
 
+## <brd>
+**SETUP**
+
 A custom function standardizes each image into a black and white 64x64 format, then converts all pixels into a tensor which is then used by the model.
 Model architecture follows a simple flow:
 
@@ -26,6 +29,10 @@ Other notable details;
     Optimizer: Adaptive moment estimation (Adam),
     Loss function: Cross Entropy.
 
+## <brd>
+
+**USAGE**
+
 The files are straightforward and run in a specific order: 
 
 **GalModel.py**: includes GalCNN class and image preperation functions, gets called by all other files.
@@ -37,6 +44,9 @@ The files are straightforward and run in a specific order:
 3    **gal_test.py**: similar to validation, it runs the trained model on another separate test subset and gives an accuracy and loss reading. 
 
 4    **gal_classifier.py**: classifies locally stored images. Input the desired image path (line 17) and let it run. A prediction and confidence percentage will be printed.
+
+## <brd>
+**RESULTS**
 
 Through many iterations, a final [testing] accuracy of ~ 75.2 % and loss of ~ 0.67 was achieved.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification, that goal was achieved.
