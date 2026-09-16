@@ -22,7 +22,9 @@ The convolutional layers and batches increase in sizes equally:
 
 FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 morphology classes, each corresponding to 1 of 8 galaxy classes within the dataset. The model makes predictions by returning a list of 8 logits, and identifies the largest value, which is the predicted class. mrJordi0/galaxy-zoo-dataset architecture made this project much easier and was an amazing resource. Below is the CNN model logic flow.
 
-<img width="2813" height="392" alt="galMLflow" src="https://github.com/user-attachments/assets/b2932984-b673-4aea-9577-9439934aee43" />
+<div align="center">
+    <img width="2813" height="392" alt="galMLflow" src="https://github.com/user-attachments/assets/b2932984-b673-4aea-9577-9439934aee43" />
+</div>
 
 Other notable details;
     Activation function: ReLU,
@@ -35,15 +37,15 @@ Other notable details;
 
 The files are straightforward and run in a specific order: 
 
-**GalModel.py**: includes GalCNN class and image preperation functions, gets called by all other files.
+`GalModel.py`: includes GalCNN class and image preperation functions, gets called by all other files.
     
-1    **gal_train.py**: training loop utilizing the training subset. Select the amount of epochs to train for (line 23) and let it run. The trained model will be saved as "galaxy_model1.pth", my particular trained model file is also uploaded in the repository. Note all three training, validation and test files will print start and end times along with their respective info.
+1    `gal_train.py`: training loop utilizing the training subset. Select the amount of epochs to train for (line 23) and let it run. The trained model will be saved as "galaxy_model1.pth", my particular trained model file is also uploaded in the repository. Note all three training, validation and test files will print start and end times along with their respective info.
 
-2    **gal_validation.py**: validates the trained model on a separate validation subset and gives an accuracy and loss reading.
+2    `gal_validation.py`: validates the trained model on a separate validation subset and gives an accuracy and loss reading.
 
-3    **gal_test.py**: similar to validation, it runs the trained model on another separate test subset and gives an accuracy and loss reading. 
+3    `gal_test.py`: similar to validation, it runs the trained model on another separate test subset and gives an accuracy and loss reading. 
 
-4    **gal_classifier.py**: classifies locally stored images. Input the desired image path (line 17) and let it run. A prediction and confidence percentage will be printed.
+4    `gal_classifier.py`: classifies locally stored images. Input the desired image path (line 17) and let it run. A prediction and confidence percentage will be printed.
 
 ## <brd>
 **RESULTS**
@@ -52,9 +54,9 @@ Through many iterations, a final [testing] accuracy of ~ 75.2 % and loss of ~ 0.
 These values are not intended to be extraordinary, the goal of this project was to become familiar with CNNs and image classification, that goal was achieved.
 Attached are some images and their respective predictions. Note these images are from a completely novel dataset.
 
-
-<img width="1230" height="368" alt="galML examples 4" src="https://github.com/user-attachments/assets/a2e0e0cf-7a17-4d63-9c8d-a9c72b37b541" />
-
+<div align="center">
+    <img width="1230" height="368" alt="galML examples 4" src="https://github.com/user-attachments/assets/a2e0e0cf-7a17-4d63-9c8d-a9c72b37b541" />
+</div>
 
 Below is the cited Galaxy Zoo dataset.
 
