@@ -35,6 +35,7 @@ Other notable details;
 
 **USAGE**
 
+To use, download all `.py` files to one directory, preferably include all images as well.
 The files are straightforward and run in a specific order: 
 
 `GalModel.py`: includes GalCNN class and image preperation functions, gets called by all other files.
