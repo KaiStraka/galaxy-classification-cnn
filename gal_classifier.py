@@ -14,7 +14,7 @@ id_label = ["Round Elliptical", "In-between Elliptical", "Cigar-shaped Elliptica
 
 gal_dataset = load_dataset("mrJordi0/galaxy-zoo-dataset")        # load dataset
 test_data = GalDataset(gal_dataset["test"])                      # load test subset
-image = Image.open(r"[image directory]")    # call image directly
+image = Image.open(r"[image path]")    # call image directly
 image = prep_img(image)
 image = image.unsqueeze(0)      # change dimension
 
