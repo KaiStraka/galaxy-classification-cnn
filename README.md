@@ -58,6 +58,9 @@ Attached are some images and their respective predictions. Note these images are
     <img width="1230" height="368" alt="galML examples 4" src="https://github.com/user-attachments/assets/a2e0e0cf-7a17-4d63-9c8d-a9c72b37b541" />
 </div>
 
+## <brd>
+**CITATION**
+
 Below is the cited Galaxy Zoo dataset.
 
 @misc{Lin2021,
