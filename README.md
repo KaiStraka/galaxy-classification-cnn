@@ -14,11 +14,11 @@ Input image -> Prepare image -> {Conv layer -> Batch normalization -> ReLU activ
 
 The convolutional layers and batches increase in sizes equally:
 
-**Conv 1**: 32 channels / filters,
+**Conv 1**: 32 channels,
 
-**Conv 2**: 64 channels / filters,
+**Conv 2**: 64 channels,
 
-**Conv 3**: 128 channels / filters.
+**Conv 3**: 128 channels.
 
 FC1 has 8192 input features and outputs 128 into FC2, which outputs 8 morphology classes, each corresponding to 1 of 8 galaxy classes within the dataset. The model makes predictions by returning a list of 8 logits, and identifies the largest value, which is the predicted class. mrJordi0/galaxy-zoo-dataset architecture made this project much easier and was an amazing resource. Below is the CNN model logic flow.
 
